@@ -96,6 +96,11 @@ class Jarvis:
                 else:
                     response = f"I couldn't find an application named {action['app']}."
 
+            elif action["intent"] == "google_search":
+
+                self.browser.google_search(action["query"])
+                response = f"Searching Google for {action['query']}."
+
             else:
 
                 response = self.llm.ask(
