@@ -16,3 +16,12 @@ class Browser:
         )
 
         webbrowser.open(url)
+
+    def youtube_search(self, query):
+
+        url = (
+            "https://www.youtube.com/results?search_query="
+            + quote_plus(query)
+        )
+
+        webbrowser.open(url)

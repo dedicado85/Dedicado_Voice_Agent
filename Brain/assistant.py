@@ -101,6 +101,11 @@ class Jarvis:
                 self.browser.google_search(action["query"])
                 response = f"Searching Google for {action['query']}."
 
+            elif action["intent"] == "youtube_search":
+
+                self.browser.youtube_search(action["query"])
+                response = f"Searching YouTube for {action['query']}."
+
             else:
 
                 response = self.llm.ask(

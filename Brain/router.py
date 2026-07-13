@@ -5,6 +5,24 @@ class Router:
         text = text.strip()
         lower = text.lower()
 
+        if lower.startswith("search youtube for "):
+
+            query = text[len("search youtube for "):].strip()
+
+            return {
+                "intent": "youtube_search",
+                "query": query
+            }
+
+        if lower.startswith("play "):
+
+            query = text[len("play "):].strip()
+
+            return {
+                "intent": "youtube_search",
+                "query": query
+            }
+
         if lower.startswith("search google for "):
 
             query = text[len("search google for "):].strip()
